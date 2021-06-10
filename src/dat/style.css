@@ -95,3 +95,107 @@ img {
     max-height: 300px;
     margin: auto;
 }
+
+.clancibody h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 20px;
+    color: #013b4f;
+}
+
+.clancibody p {
+    font-family: 'Merriweather', serif;
+}
+
+.admin {
+
+}
+
+.admin .log {
+    width: 250px;
+    height: 50px;
+    font-family: 'Krona One', sans-serif;
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #013b4f;
+    background-image: linear-gradient(rgba(130, 130, 130, 0.19),rgba(130, 130, 130, 0.02));
+}
+
+.admin p {
+    font-family: 'Krona One', sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 16px;
+    color: #013b4f;
+    font-weight: bold;
+}
+
+.admin input[type=text] {
+    width: 200px;
+    height: 30px;
+    font-family: 'Krona One', sans-serif;
+    letter-spacing: 1px;
+    font-size: 11px;
+    border: none;
+    border-bottom: 1px solid #013b4f;
+    margin-bottom: 5px;
+}
+
+.admin input[type=password] {
+    width: 200px;
+    height: 30px;
+    font-family: 'Krona One', sans-serif;
+    letter-spacing: 1px;
+    font-size: 11px;
+    border: none;
+    border-bottom: 1px solid #013b4f;
+    margin-bottom: 5px;
+}
+
+.admin input[type=submit] {
+    width: 100px;
+    height: 30px;
+    font-family: 'Krona One', sans-serif;
+    letter-spacing: 1px;
+    font-size: 10px;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #013b4f;
+    background-image: linear-gradient(rgba(130, 130, 130, 0.19),rgba(130, 130, 130, 0.02));
+}
+
+.admin button[type=submit] {
+    width: 100px;
+    height: 30px;
+    font-family: 'Krona One', sans-serif;
+    letter-spacing: 1px;
+    font-size: 10px;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #013b4f;
+    background-image: linear-gradient(rgba(130, 130, 130, 0.19),rgba(130, 130, 130, 0.02));
+}
+
+.admin textarea {
+    font-family: 'Krona One', sans-serif;
+    letter-spacing: 1px;
+    font-size: 11px;
+    border: none;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #013b4f;
+}
+
+.admin label {
+    font-family: 'Krona One', sans-serif;
+    letter-spacing: 1px;
+    font-size: 11px;
+}
+
+.promjenanaslov {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+}

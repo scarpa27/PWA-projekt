@@ -1,7 +1,6 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="hr">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,19 +8,14 @@
     <link rel="stylesheet" href="src/dat/style.css">
 </head>
 
-<body>
-<?php include "kod.php"; ?>
-
+<body class="clancibody">
 <div id="wrapper">
-<header>
-    <?php include "./src/dat/header.php";?>
-</header>
+    <header>
+        <?php include "./src/dat/header.php";?>
+    </header>
 
     <?php
-    $dbc = mysqli_connect("localhost","root","toni","confidencial") or die('Error '.mysqli_connect_error());
-    mysqli_set_charset($dbc,'utf8');
-    $query="SELECT * FROM clanci WHERE kategorija='europa' ORDER BY id DESC";
-    $result = mysqli_query($dbc,$query);
+    $result = query_to_result("SELECT * FROM clanci WHERE kategorija='europa' ORDER BY id DESC");
     while($row = mysqli_fetch_array($result)) {
         $id = $row['id'];
         $datum = $row['datum'];
@@ -37,11 +31,6 @@
             <p>$kratki</p>
             <img src='$slika'>
             <p>$datum</p>";if($arhiva==1){echo "<p>arhivirano</p>";}
-            echo "</div></a><hr>
-        ";
-    }
-
-    ?>
-
+            echo "</div></a><hr>";} ?>
 </div>
 </body>

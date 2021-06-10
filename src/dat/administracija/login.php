@@ -1,7 +1,6 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="hr">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,19 +8,17 @@
     <link rel="stylesheet" href="../../../src/dat/style.css">
 </head>
 
-<body>
+<body class="admin">
 <div id="wrapper">
     <header>
         <?php include "../../../src/dat/header.php";?>
     </header>
-<?php
-echo "
-<form method='POST'>
-    <input type='text' name='user' placeholder='Korisničko ime'><br>
-    <input type='password' name='pass' placeholder='Lozinka'><br>
-    <input type='submit' name='submit' value='Prijavi se'/><br>
-</form>  
-";
+    <?php echo "
+        <form method='POST'>
+            <input type='text' name='user' placeholder='Korisničko ime'><br>
+            <input type='password' name='pass' placeholder='Lozinka'><br>
+            <input type='submit' name='submit' value='Prijavi se'/><br>
+        </form>";
 
 if (isset($_POST['submit']) and strlen($_POST['user'])>1 and strlen($_POST['pass'])>1) {
     $user=$_POST['user'];
@@ -39,16 +36,8 @@ if (isset($_POST['submit']) and strlen($_POST['user'])>1 and strlen($_POST['pass
             mysqli_stmt_bind_result($stmt,$lvl);
             mysqli_stmt_fetch($stmt);
             $_SESSION['lvl']=$lvl;
-            echo "<script type='text/javascript'>setTimeout(function(){ window.location = '../../../administracija.php'; }, 1100);</script>";
-        }
-        else {
-            echo "Ne postoji korisnik sa zadanim kredencijalima";
-        }
-    }
-    else {
-        echo "Greška!";
-    }
-}
-?>
+            echo "<script type='text/javascript'>setTimeout(function(){ window.location = '../../../administracija.php'; }, 100);</script>";}
+        else echo "Ne postoji korisnik sa zadanim kredencijalima";}
+    else echo "Greška!";} ?>
 </div>
 </body>
