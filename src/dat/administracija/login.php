@@ -24,7 +24,7 @@ if (isset($_POST['submit']) and strlen($_POST['user'])>1 and strlen($_POST['pass
     $user=$_POST['user'];
     $pass=crypt($_POST['pass'],CRYPT_BLOWFISH);
 
-    $dbc = mysqli_connect("localhost","root","toni","confidencial",3306) or die('Error '.mysqli_connect_error());
+    $dbc = mysqli_connect("eu-cdbr-west-01.cleardb.com","be28d27ba72c10","7689775c","heroku_875a8262c0fabdf") or die('Error '.mysqli_connect_error());
     $q="SELECT lvl FROM korisnik WHERE user=? AND pass=?";
     $stmt = mysqli_stmt_init($dbc);
     if(mysqli_stmt_prepare($stmt,$q)) {

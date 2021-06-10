@@ -52,9 +52,9 @@ function s_article($kategorija,$naslov,$kratki,$slika,$datum,$tekst) {
 }
 
 function query_to_result ($query) {
-    $dbc = mysqli_connect("localhost","root","toni","confidencial") or die('Error '.mysqli_connect_error());
+    $dbc = mysqli_connect("eu-cdbr-west-01.cleardb.com","be28d27ba72c10","7689775c","heroku_875a8262c0fabdf") or die('Error '.mysqli_connect_error());
     mysqli_set_charset($dbc,'utf8');
-    return mysqli_query($dbc,$query);
+    return (mysqli_query($dbc,$query) or die(mysqli_error()));
 }
 
 function obrisi($id) {
@@ -76,10 +76,7 @@ function unesiid($id,$datum,$naslov,$kratki,$tekst,$slika,$kategorija,$arhiva) {
 }
 
 function clanak1() {
-    $dbc = mysqli_connect("localhost","root","toni","confidencial",3306) or die('Error '.mysqli_connect_error());
-    mysqli_set_charset($dbc,'utf8');
-    $query = "SELECT * FROM clanci";
-    $result = mysqli_query($dbc,$query);
+    $result = query_to_result("SELECT * FROM clanci");
     while ($row = mysqli_fetch_array($result)) {
         $id = $row['id'];
         $naslov = $row['naslov'];
