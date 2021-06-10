@@ -54,7 +54,7 @@ function s_article($kategorija,$naslov,$kratki,$slika,$datum,$tekst) {
 function query_to_result ($query) {
     $dbc = mysqli_connect("eu-cdbr-west-01.cleardb.com","be28d27ba72c10","7689775c","heroku_875a8262c0fabdf") or die('Error '.mysqli_connect_error());
     mysqli_set_charset($dbc,'utf8');
-    return (mysqli_query($dbc,$query) or die(mysqli_error()));
+    return mysqli_query($dbc,$query);
 }
 
 function obrisi($id) {
