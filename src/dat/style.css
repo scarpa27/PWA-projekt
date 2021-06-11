@@ -269,3 +269,11 @@ article:hover {
     background-color: #103747;
     color: white;
 }
+
+article h2 {
+    transition: .3s .3s;
+}
+
+article:hover h2 {
+    color: white;
+}
