@@ -16,7 +16,7 @@
     <?php echo "
         <form method='POST'>
             <input type='text' name='user' placeholder='Korisničko ime'><br>
-            <input type='text' name='pass' placeholder='Lozinka'><br>
+            <input type='password' name='pass' placeholder='Lozinka'><br>
             <input type='text' name='ime' placeholder='Ime'><br>
             <input type='text' name='prezime' placeholder='Prezime'><br>
             <input type='submit' name='submit' value='Registriraj se'/><br>
@@ -24,11 +24,14 @@
 
     if (isset($_POST['submit'])) {
         $user=$_POST['user'];
-        $pass=crypt($_POST['pass'],CRYPT_BLOWFISH);
+        echo $_POST['pass'];
+        $pass=password_hash($_POST['pass'],PASSWORD_DEFAULT);
+        echo $pass;
         $ime=$_POST['ime'];
         $prezime=$_POST['prezime'];
 
         $dbc = mysqli_connect("eu-cdbr-west-01.cleardb.com","be28d27ba72c10","7689775c","heroku_875a8262c0fabdf") or die('Error '.mysqli_connect_error());
+        mysqli_set_charset($dbc,'utf8');
         $q="INSERT INTO korisnik(ime,prezime,user,pass) VALUES (?,?,?,?)";
         $stmt = mysqli_stmt_init($dbc);
         if(mysqli_stmt_prepare($stmt,$q)) {

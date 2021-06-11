@@ -33,4 +33,5 @@
             <p>$datum</p>";if($arhiva==1){echo "<p>arhivirano</p>";}
             echo "</div></a><hr>";} ?>
 </div>
+<?php include "src/dat/footer.php"; ?>
 </body>

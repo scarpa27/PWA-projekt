@@ -27,10 +27,12 @@
         $arhiva = $row['arhiva'];
         echo "
             <a class='cllink' href='clanak.php?cl=$id'><div class='clanci'>
+            <article>
             <h2>$naslov</h2>
             <p>$kratki</p>
             <img src='$slika'>
             <p>$datum</p>";if($arhiva==1){echo "<p>arhivirano</p>";}
-            echo "</div></a><hr>";} ?>
+            echo "</article></div></a><hr>";} ?>
 </div>
+<?php include "src/dat/footer.php"; ?>
 </body>

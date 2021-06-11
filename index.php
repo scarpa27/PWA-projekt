@@ -28,6 +28,8 @@
             <?php get_articles(2); ?>
         </div>
     </section>
+
 </div>
+<?php include "src/dat/footer.php"; ?>
 </body>
 </html>

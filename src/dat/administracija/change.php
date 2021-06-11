@@ -15,7 +15,9 @@
     </header>
 
     <h1 class="promjenanaslov">ODABERI ČLANAK ZA PROMJENU</h1>
+    <div id="wrap-clanci-2">
     <?php clanak1() ?>
+    </div>>
 </div>
 </body>
 </html>

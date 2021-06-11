@@ -15,9 +15,9 @@
     </header>
 
     <?php
-    if ($_SESSION['lvl']) {
+    if (isset($_SESSION['lvl'])) {
         if ($_SESSION['lvl'] == 4) {
-            echo "<p>Dobrodošli, administratore!</p><br>";
+            echo "<p class='welcome'>Dobrodošli, administratore!</p><br>";
             //;
             echo "<a href='src/dat/administracija/change.php'><button class='log'>UREDI POSTOJEĆI ČLANAK</button></a><br>";
             echo "<a href='src/dat/administracija/unos.php'><button class='log'>DODAJ NOVI ČLANAK</button></a><br>";}
