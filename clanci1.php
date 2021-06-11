@@ -13,7 +13,7 @@
     <header>
         <?php include "./src/dat/header.php";?>
     </header>
-
+<div class="wrap-kategorije">
     <?php
     $result = query_to_result("SELECT * FROM clanci WHERE kategorija='europa' ORDER BY id DESC");
     while($row = mysqli_fetch_array($result)) {
@@ -26,13 +26,13 @@
         $kategorija = $row['kategorija'];
         $arhiva = $row['arhiva'];
         echo "
-            <a class='cllink' href='clanak.php?cl=$id'><div class='clanci'>
-            <article>
+            <article class='article50'>
+            <a class='cllink' href='clanak.php?cl=$id'>
             <h2>$naslov</h2>
             <p>$kratki</p>
             <img src='$slika'>
             <p>$datum</p>";if($arhiva==1){echo "<p>arhivirano</p>";}
-            echo "</article></div></a><hr>";} ?>
+            echo "</a></article>";} ?></div>
 </div>
 <?php include "src/dat/footer.php"; ?>
 </body>

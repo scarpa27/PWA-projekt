@@ -15,7 +15,7 @@ function get_articles($kat) {
 
 function article($id, $naslov,$slika,$vrime) {
 
-    echo "<article>";
+    echo "<article class='article33'>";
     echo "<a class='cllink' href='clanak.php?cl=$id'>";
     echo "<img src='$slika' alt='1'>";
     echo "<h4>".$naslov."</h4>";
@@ -87,7 +87,7 @@ function clanak1() {
 }
 
 function clanak2($id, $naslov,$slika,$vrime) {
-    echo "<article>";
+    echo "<article class='article33'>";
     echo "<a class='cllink' href='unos.php?cl=$id'>";
     echo "<img src='$slika' alt='1'>";
     echo "<h4>".$naslov."</h4>";
