@@ -6,17 +6,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>El Confidencial</title>
     <link rel="stylesheet" href="src/dat/clanak.css">
-    <style>
-        #tekst {
-            font-size: 15px;
-            font-family: 'Raleway', sans-serif;
-            font-weight: bold;
-        }
-        #clanak_kratki {
-            font-family: 'Merriweather', serif;
-            font-size: 15px;
-        }
-    </style>
 </head>
 
 <body>
@@ -30,4 +19,5 @@
     s_get_article($id);
     ?>
 </div>
+<?php include "src/dat/footer.php"; ?>
 </body>
