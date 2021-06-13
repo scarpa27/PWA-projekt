@@ -41,7 +41,7 @@ function s_get_article($id) {
 
 function s_article($kategorija,$naslov,$kratki,$slika,$datum,$tekst) {
     $datum = substr($datum,8,2).substr($datum,4,4).substr($datum,0,4);
-    echo "<h5>".strtoupper($kategorija)."</h5><hr>
+    echo "<h5 id='naslov'>".strtoupper($kategorija)."</h5><hr>
           <h1>$naslov</h1>
           <div id='wrap-tijelo'>
           <p id='clanak_kratki'>$kratki</p>
