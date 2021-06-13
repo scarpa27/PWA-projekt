@@ -277,3 +277,12 @@ article h2 {
 article:hover h2 {
     color: white;
 }
+
+#tekst {
+    font-size: 18px;
+}
+
+#clanak_kratki {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+}

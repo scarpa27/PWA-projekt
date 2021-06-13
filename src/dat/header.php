@@ -5,8 +5,8 @@ echo "<h1>El Confidencial</h1>
         <nav>
             <ul>
                 <li><a href='/index.php'>HOME</a></li>
-                <li><a href='/clanci1.php'>EUROPA</a></li>
-                <li><a href='/clanci2.php'>TEKNAUTAS</a></li>
+                <li><a href='/kategorija.php?kat=europa'>EUROPA</a></li>
+                <li><a href='/kategorija.php?kat=teknautas'>TEKNAUTAS</a></li>
                 <li><a href='/administracija.php'>ADMINISTRACIJA</a></li>
             </ul>
         </nav>

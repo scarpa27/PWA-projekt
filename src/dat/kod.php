@@ -44,10 +44,10 @@ function s_article($kategorija,$naslov,$kratki,$slika,$datum,$tekst) {
     echo "<h5>".strtoupper($kategorija)."</h5><hr>
           <h1>$naslov</h1>
           <div id='wrap-tijelo'>
-          <p>$kratki</p>
+          <p id='clanak_kratki'>$kratki</p>
           <img src='$slika'><hr>
           <p>$datum</p>
-          <p id='tekst'>$tekst</p></div>
+          <p id='tekst''>$tekst</p></div>
     ";
 }
 
