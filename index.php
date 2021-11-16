@@ -52,7 +52,8 @@
 
         document.getElementById('ucitaj').addEventListener('click', getData);
         document.getElementById('osvjezi').addEventListener('click', filter);
-        document.getElementById("dodaj-film").addEventListener('click',dodaj_film)
+        document.getElementById("dodaj-film").addEventListener('click',dodaj_film);
+        document.getElementById("god").addEventListener('change', filter);
 
         function getData(e) {
             e.preventDefault();
